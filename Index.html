@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Import Style </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #d6222257;
+      color: rgba(31, 27, 27, 0.925);
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1a18186e;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #d6222257;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1521335629791-ce4aec67dd53');
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero h1 {
+      font-size: 40px;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      background: rgb(161, 158, 158);
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      margin: 10px 0;
+    }
+
+    .product p {
+      color: #d6222257;
+      font-weight: bold;
+    }
+
+    .product button {
+      padding: 10px;
+      background-color: #111;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .product button:hover {
+      background-color: #555;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Import Style</h1>
+  <p>Las mejores prendas al mejor precio</p>
+</header>
+
+<nav>
+  <a href="#">Inicio</a>
+  <a href="#">Hombres</a>
+  <a href="#">Mujeres</a>
+  <a href="#">Contacto</a>
+</nav>
+
+  </div>
+</div>
+<div class="container">
+  <h2>Productos</h2>
+  <div class="products">
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+      <h3>Camiseta Básica</h3>
+      <p class="price">$10</p>
+      <a class="btn" href="https://wa.me/593963269002?text=Hola%20quiero%20la%20Camiseta%20Básica">Comprar</a>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+      <h3>Jeans</h3>
+      <p class="price">$25</p>
+      <a class="btn" href="https://wa.me/593963269002?text=Hola%20quiero%20los%20Jeans">Comprar</a>
+    </div>
+
+    <div class="product">
+      <img src="https://www.tennis.com.ec/ropa-hombre/chaquetas?srsltid=AfmBOoq3LuIYP55dXtA3QVmQ0I5Cv6a2JHdxAMqOm0eokaB76t-36Otll">
+      <h3>Chaqueta</h3>
+      <p class="price">$40</p>
+      <a class="btn" href="https://wa.me/593963269002?text=Hola%20quiero%20la%20Chaqueta">Comprar</a>
+    </div>
+
+  </div>
+</div>
+
+<a class="whatsapp" href="https://wa.me/593963269002">💬</a>
+
+<footer>
+  <p>&copy; 2026 Import Style</p>
+</footer>
+
+<script>
+  function comprar(producto) {
+    alert('Has seleccionado: ' + producto);
+  }
+</script>
+
+</body>
+</html>
