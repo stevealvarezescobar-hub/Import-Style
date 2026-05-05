@@ -3,171 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Import Style </title>
+  <title>Import Style</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f4f4f4;
-    }
+    body { font-family: Arial; margin: 0; background:#f4f4f4; }
+    header { background:#d6222257; text-align:center; padding:15px; }
+    nav { display:flex; justify-content:center; background:#1a18186e; }
+    nav a { color:white; padding:14px 20px; cursor:pointer; }
+    nav a:hover { background:#d6222257; }
 
-    header {
-      background-color: #d6222257;
-      color: rgba(31, 27, 27, 0.925);
-      padding: 15px;
-      text-align: center;
-    }
+    .container { padding:20px; }
+    .products { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #1a18186e;
-    }
+    .product { background:#a19e9e; padding:15px; border-radius:10px; text-align:center; }
+    .product img { width:100%; border-radius:10px; }
+    .price { color:#0fdd2be1; font-weight:bold; }
 
-    nav a {
-      color: white;
-      padding: 14px 20px;
-      text-decoration: none;
-    }
-
-    nav a:hover {
-      background-color: #d6222257;
-    }
-    .hero {
-      background: url('https://images.unsplash.com/photo-1521335629791-ce4aec67dd53');
-      background-size: cover;
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-    }
-    .hero h1 {
-      font-size: 40px;
-    }
-
-    .container {
-      padding: 20px;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
-
-    .product {
-      background: rgb(161, 158, 158);
-      padding: 15px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .product img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    .product h3 {
-      margin: 10px 0;
-    }
-
-    .product p {
-      color: #0fdd2be1;
-      font-weight: bold;
-    }
-
-    .product button {
-      padding: 10px;
-      background-color: #111;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    .product button:hover {
-      background-color: #555;
-    }
-
-    footer {
-      background-color: #111;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: 20px;
-    }
     .btn {
-      display: inline-block;
-      padding: 10px 15px;
-      margin-top: 10px;
-      background: black;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    .btn:hover {
-      background: #444;
+      display:inline-block;
+      padding:10px 15px;
+      margin-top:10px;
+      background:black;
+      color:white;
+      text-decoration:none;
+      border-radius:5px;
     }
 
     .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      background: #25D366;
-      color: white;
-      padding: 20px;
-      border-radius: 50%;
-      text-decoration: none;
-      font-size: 25px;
+      position:fixed;
+      bottom:20px;
+      left:20px;
+      background:#25D366;
+      color:white;
+      padding:20px;
+      border-radius:50%;
+      font-size:25px;
+      text-decoration:none;
     }
 
-    footer {
-      background: black;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 20px;
-    }
+    footer { background:black; color:white; text-align:center; padding:15px; }
   </style>
 </head>
 <body>
 
 <header>
   <h1>Import Style</h1>
+  <p> by tania</p>
   <p>Las mejores prendas al mejor precio</p>
 </header>
 
 <nav>
-  <a href="#">Inicio</a>
-  <a href="#">Hombres</a>
-  <a href="#">Mujeres</a>
-  <a href="#">Contacto</a>
+  <a onclick="filtrar('todos')">Inicio</a>
+  <a onclick="filtrar('hombre')">Hombres</a>
+  <a onclick="filtrar('mujer')">Mujeres</a>
+  <a onclick="filtrar('contacto')">Contacto</a>
 </nav>
 
-  </div>
-</div>
 <div class="container">
   <h2>Productos</h2>
   <div class="products">
 
-    <div class="product">
+    <div class="product hombre">
       <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
-      <h3>Camiseta Básica</h3>
+      <h3>Camiseta Hombre</h3>
       <p class="price">$10</p>
-      <a class="btn" href="https://wa.me/593963269002?text=Hola%20quiero%20la%20Camiseta%20Básica">Comprar</a>
+      <a class="btn" href="https://wa.me/593963269002?text=Hola%20quiero%20la%20Camiseta">Comprar</a>
     </div>
 
-    <div class="product">
+    <div class="product mujer">
       <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
-      <h3>Jeans</h3>
+      <h3>Jeans Mujer</h3>
       <p class="price">$25</p>
       <a class="btn" href="https://wa.me/593963269002?text=Hola%20quiero%20los%20Jeans">Comprar</a>
     </div>
 
-    <div class="product">
-      <img src="https://www.tennis.com.ec/ropa-hombre/chaquetas?srsltid=AfmBOoq3LuIYP55dXtA3QVmQ0I5Cv6a2JHdxAMqOm0eokaB76t-36Otll">
-      <h3>Chaqueta</h3>
+    <div class="product hombre">
+      <img src="https://images.unsplash.com/photo-1520975922284-9e0ce8276a7c">
+      <h3>Chaqueta Hombre</h3>
       <p class="price">$40</p>
       <a class="btn" href="https://wa.me/593963269002?text=Hola%20quiero%20la%20Chaqueta">Comprar</a>
     </div>
@@ -175,17 +86,27 @@
   </div>
 </div>
 
-<a class="whatsapp" href="https://wa.me/593963269002">💬
-   
-</a>
+<a class="whatsapp" href="https://wa.me/593963269002">💬</a>
+
 <footer>
   <p>&copy; 2026 Import Style</p>
+  <p> by tania</p>
 </footer>
 
 <script>
-  function comprar(producto) {
-    alert('Has seleccionado: ' + producto);
-  }
+function filtrar(tipo) {
+  let productos = document.querySelectorAll('.product');
+
+  productos.forEach(p => {
+    if (tipo === 'todos') {
+      p.style.display = 'block';
+    } else if (p.classList.contains(tipo)) {
+      p.style.display = 'block';
+    } else {
+      p.style.display = 'none';
+    }
+  });
+}
 </script>
 
 </body>
