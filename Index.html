@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Import Style</title>
+  <style>
+    body { font-family: Arial; margin: 0; background:#f4f4f4; }
+    header { background:#d6222257; text-align:center; padding:15px; }
+    nav { display:flex; justify-content:center; background:#1a18186e; }
+    nav a { color:white; padding:14px 20px; cursor:pointer; }
+    nav a:hover { background:#d6222257; }
+
+    .container { padding:20px; }
+    .products { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
+
+    .product { background:#a19e9e; padding:15px; border-radius:10px; text-align:center; }
+    .product img { width:100%; border-radius:10px; }
+    .price { color:#0fdd2be1; font-weight:bold; }
+
+    .btn {
+      display:inline-block;
+      padding:10px 15px;
+      margin-top:10px;
+      background:black;
+      color:white;
+      text-decoration:none;
+      border-radius:5px;
+    }
+
+    .whatsapp {
+      position:fixed;
+      bottom:20px;
+      left:20px;
+      background:#25D366;
+      color:white;
+      padding:20px;
+      border-radius:50%;
+      font-size:25px;
+      text-decoration:none;
+    }
+
+    footer { background:black; color:white; text-align:center; padding:15px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Import Style</h1>
+  <p> by tania</p>
+  <p>Las mejores prendas al mejor precio</p>
+</header>
+
+<nav>
+  <a onclick="filtrar('todos')">Inicio</a>
+  <a onclick="filtrar('hombre')">Hombres</a>
+  <a onclick="filtrar('mujer')">Mujeres</a>
+  <a onclick="filtrar('contacto')">Contacto</a>
+</nav>
+
+<div class="container">
+  <h2>Productos</h2>
+  <div class="products">
+
+    <div class="product hombre">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+      <h3>Camiseta Hombre</h3>
+      <p class="price">$10</p>
+      <a class="btn" href="https://wa.me/593963269002?text=Hola%20quiero%20la%20Camiseta">Comprar</a>
+    </div>
+
+    <div class="product mujer">
+      <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+      <h3>Jeans Mujer</h3>
+      <p class="price">$25</p>
+      <a class="btn" href="https://wa.me/593963269002?text=Hola%20quiero%20los%20Jeans">Comprar</a>
+    </div>
+
+    <div class="product hombre">
+      <img src="https://images.unsplash.com/photo-1520975922284-9e0ce8276a7c">
+      <h3>Chaqueta Hombre</h3>
+      <p class="price">$40</p>
+      <a class="btn" href="https://wa.me/593963269002?text=Hola%20quiero%20la%20Chaqueta">Comprar</a>
+    </div>
+
+  </div>
+</div>
+
+<a class="whatsapp" href="https://wa.me/593963269002">💬</a>
+
+<footer>
+  <p>&copy; 2026 Import Style</p>
+  <p> by tania</p>
+</footer>
+
+<script>
+function filtrar(tipo) {
+  let productos = document.querySelectorAll('.product');
+
+  productos.forEach(p => {
+    if (tipo === 'todos') {
+      p.style.display = 'block';
+    } else if (p.classList.contains(tipo)) {
+      p.style.display = 'block';
+    } else {
+      p.style.display = 'none';
+    }
+  });
+}
+</script>
+
+</body>
+</html>
+
